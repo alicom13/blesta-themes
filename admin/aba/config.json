@@ -1,0 +1,14 @@
+{
+	"version": "1.0.0",
+	"name": "ABA Theme",
+	"description": "Atlantis Blesta Admin Template.",
+	"authors": [
+		{
+			"name": "Mas ALI.",
+			"url": "http://ca.qhost.co.id"
+		}
+	],
+	"require": {
+		"blesta": ">=5.0.0"
+	}
+}

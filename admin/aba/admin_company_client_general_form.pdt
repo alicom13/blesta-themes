@@ -1,0 +1,46 @@
+
+                        <ul>
+                            <li>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.general.field_unique_contact_emails', true), 'unique_contact_emails', ['class' => 'inline']);?>
+                                <span class="tooltip block"><?php $this->_('AppController.tooltip.text');?><div><?php $this->_('AdminCompanyClientOptions.!tooltip.unique_contact_emails');?></div></span>
+                                <?php $this->Form->fieldSelect('unique_contact_emails', (isset($unique_email_options) ? $unique_email_options : null), (isset($vars['unique_contact_emails']) ? $vars['unique_contact_emails'] : null), ['id' => 'unique_contact_emails', 'class' => 'block']);?>
+                            </li>
+                            <li>
+                                <?php
+                                $this->Form->fieldCheckbox('force_email_usernames', 'true', ((isset($vars['force_email_usernames']) ? $vars['force_email_usernames'] : 'false') == 'true'), ['id' => 'force_email_usernames']);
+                                $this->Form->label($this->_('AdminCompanyClientOptions.general.field_force_email_usernames', true), 'force_email_usernames', ['class' => 'inline']);
+                                ?>
+                                <span class="tooltip"><?php $this->_('AppController.tooltip.text');?><div><?php $this->_('AdminCompanyClientOptions.!tooltip.force_email_usernames');?></div></span>
+                            </li>
+                            <li>
+                                <?php
+                                $this->Form->fieldCheckbox('email_verification', 'true', ((isset($vars['email_verification']) ? $vars['email_verification'] : 'false') == 'true'), ['id' => 'email_verification']);
+                                $this->Form->label($this->_('AdminCompanyClientOptions.general.field_email_verification', true), 'email_verification', ['class' => 'inline']);
+                                ?>
+                                <span class="tooltip"><?php $this->_('AppController.tooltip.text');?><div><?php $this->_('AdminCompanyClientOptions.!tooltip.email_verification');?></div></span>
+                            </li>
+                            <li>
+                                <?php
+                                $this->Form->fieldCheckbox('prevent_unverified_payments', 'true', ((isset($vars['prevent_unverified_payments']) ? $vars['prevent_unverified_payments'] : 'false') == 'true'), ['id' => 'prevent_unverified_payments']);
+                                $this->Form->label($this->_('AdminCompanyClientOptions.general.prevent_unverified_payments', true), 'prevent_unverified_payments', ['class' => 'inline']);
+                                ?>
+                            </li>
+                        </ul>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        if ($('#email_verification').is(':checked')) {
+            $('#prevent_unverified_payments').prop('disabled', false);
+        } else {
+            $('#prevent_unverified_payments').prop('disabled', true);
+        }
+
+        $('#email_verification').change(function() {
+            if ($(this).is(':checked')) {
+                $('#prevent_unverified_payments').prop('disabled', false);
+            } else {
+                $('#prevent_unverified_payments').prop('disabled', true);
+            }
+        });
+    });
+</script>

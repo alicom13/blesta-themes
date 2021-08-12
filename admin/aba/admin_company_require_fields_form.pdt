@@ -1,0 +1,49 @@
+
+                        <p><?php $this->_('AdminCompanyClientOptions.requiredfields.description');?></p>
+                        <ul>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'first_name', true, ['id' => 'first_name', 'disabled' => 'disabled']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_first_name', true), 'first_name', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'last_name', true, ['id' => 'last_name', 'disabled' => 'disabled']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_last_name', true), 'last_name', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'company', in_array('company', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'company']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_company', true), 'company', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'title', in_array('title', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'title']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_title', true), 'title', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'address1', in_array('address1', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'address1']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_address1', true), 'address1', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'address2', in_array('address2', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'address2']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_address2', true), 'address2', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'city', in_array('city', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'city']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_city', true), 'city', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'country', in_array('country', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'country']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_country', true), 'country', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'state', in_array('state', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'state']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_state', true), 'state', ['class' => 'inline']);?>
+                                <span class="tooltip"><?php $this->_('AppController.tooltip.text');?><div><?php $this->_('AdminCompanyClientOptions.!tooltip.state');?></div></span>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'zip', in_array('zip', (isset($vars->required_contact_fields) ? $vars->required_contact_fields : [])), ['id' => 'zip']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_zip', true), 'zip', ['class' => 'inline']);?>
+                            </li>
+                            <li>
+                                <?php $this->Form->fieldCheckbox('required_contact_fields[]', 'email', true, ['id' => 'email', 'disabled' => 'disabled']);?>
+                                <?php $this->Form->label($this->_('AdminCompanyClientOptions.requiredfields.field_email', true), 'email', ['class' => 'inline']);?>
+                            </li>
+                        </ul>

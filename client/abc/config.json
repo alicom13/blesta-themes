@@ -1,0 +1,14 @@
+{
+	"version": "1.0.0",
+	"name": "ABC Theme",
+	"description": "Atlantis Blesta Client Theme",
+	"authors": [
+		{
+			"name": "Mas ALI.",
+			"url": "http://ca.qhost.co.id"
+		}
+	],
+	"require": {
+		"blesta": ">=5.1.2"
+	}
+}
