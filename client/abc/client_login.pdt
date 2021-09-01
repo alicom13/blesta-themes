@@ -1,13 +1,12 @@
 
-                <div class="col-md-4 col-sm-6 col-md-offset-1">
+                <div class="col-md-7">
                     <h2><i class="fas fa-lock"></i> <?php (print (isset($company->name) ? $this->Html->safe($company->name) : null));?></h2>
-                    <h4><?php $this->_('ClientLogin.index.login_heading');?></h4>
+                    <!--h4><?php // $this->_('ClientLogin.index.login_heading');?></h4-->
                     <p><?php $this->_('ClientLogin.index.description');?></p>
-                    <hr />
                 </div>
-                <div class="col-md-4 col-sm-6 col-md-offset-1">
-                    <div class="panel panel-blesta">
-                        <div class="panel-body">
+                <div class="col-md-5">
+                    <div class="container-fluid">
+                        <div class="card-body shadow">
                             <?php echo (isset($message) ? $message : null);?>
 
                             <?php
@@ -55,7 +54,7 @@
                             $this->Form->end();
                             ?>
                         </div>
-                        <div class="panel-footer">
+                        <div class="card-footer justify-content-between">
                             <a href="<?php echo $this->Html->safe($this->base_uri . 'login/reset/');?>"><?php $this->_('ClientLogin.index.link_resetpassword');?></a>
                             <a href="<?php echo $this->Html->safe($this->base_uri . 'login/forgot/');?>" class="d-block float-xl-right"><?php $this->_('ClientLogin.index.link_forgotusername');?></a>
                         </div>
